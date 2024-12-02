@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ESILV-4-A4-STD/devinci-web-expressjs-cdof2.git"
+    "url": "git+https://github.com/Nour-Affes2/Angular_Node_TDs.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ESILV-4-A4-STD/devinci-web-expressjs-cdof2/issues"
+    "url": "https://github.com/Nour-Affes2/Angular_Node_TDs.git/issues"
   },
-  "homepage": "https://github.com/ESILV-4-A4-STD/devinci-web-expressjs-cdof2#readme",
+  "homepage": "https://github.com/Nour-Affes2/Angular_Node_TDs.git#readme",
   "dependencies": {
     "express": "^4.21.1",
     "joi": "^17.13.3",
