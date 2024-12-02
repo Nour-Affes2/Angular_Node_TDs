@@ -1,0 +1,26 @@
+<!--<app-menu-nav-bar/>-->
+<!--<app-lesson-edit-form/>-->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <ul class="navbar-nav mr-auto">
+    <li ngbDropdown class="nav-item">
+      <a ngbDropdownToggle id="navbarMenu2" class="nav-link dropdowntoggle" role="button">
+        Menu2
+      </a>
+      <div ngbDropdownMenu aria-labelledby="navbarMenu2" class="dropdownmenu">
+        <a class="dropdown-item" routerLink="/lesson-edit-form">Lesson Edit
+          Form...</a>
+        <a class="dropdown-item" routerLink="/lesson-search-page">Lesson Search
+          Page...</a>
+        <a class="dropdown-item" routerLink="/test-page1">Test Page 1</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<!--<app-lesson-search-page/>-->
+
+
+
+<router-outlet></router-outlet>

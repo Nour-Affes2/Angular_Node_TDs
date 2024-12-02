@@ -1,0 +1,76 @@
+<div class="container mt-5 p-4 shadow rounded bg-light">
+  <h3 class="text-center mb-4 text-primary">Test Page</h3>
+
+  <!-- Text Bind Section -->
+  <div class="row align-items-center mb-3">
+    <label class="col-md-6 fw-bold">
+      Text Bind:
+      <code ngNonBindable>{{numberValue}}</code>
+    </label>
+    <div class="col-md-6 text-muted">
+      numberValue: <span class="fw-bold">{{numberValue}}</span>
+    </div>
+  </div>
+
+  <!-- Increment Button Section -->
+  <div class="row align-items-center mb-3">
+    <label class="col-md-6 fw-bold">Increment Button:</label>
+    <div class="col-md-6">
+      <button class="btn btn-primary w-100" type="button" (click)="onClickIncrementValue()">Increment</button>
+    </div>
+  </div>
+
+  <!-- Disabled Input Section -->
+  <div class="row align-items-center mb-3">
+    <label class="col-md-6 fw-bold">Disabled Input:</label>
+    <div class="col-md-6">
+      <input class="form-control" disabled [value]="numberValue" />
+    </div>
+  </div>
+
+  <!-- Input with Event Binding -->
+  <div class="row align-items-center mb-3">
+    <label class="col-md-6 fw-bold">Input (Event Binding):</label>
+    <div class="col-md-6">
+      <input class="form-control" [value]="numberValue" (input)="onInputChanged($event)" />
+    </div>
+  </div>
+
+  <!-- Two-Way Data Binding -->
+  <div class="row align-items-center mb-3">
+    <label class="col-md-6 fw-bold">Two-Way Binding (ngModel):</label>
+    <div class="col-md-6">
+      <input class="form-control" type="number" [(ngModel)]="numberValue" />
+    </div>
+  </div>
+
+  <!-- Custom Component: Number Display -->
+  <div class="row align-items-center mb-3">
+    <label class="col-md-6 fw-bold">Number Display Component:</label>
+    <div class="col-md-6">
+      <app-number-display [value]="numberValue"></app-number-display>
+    </div>
+  </div>
+
+  <!-- Custom Component: Number Steps -->
+  <div class="row align-items-center mb-3">
+    <label class="col-md-6 fw-bold">Number Steps Component:</label>
+    <div class="col-md-6">
+      <app-number-steps
+        (decr10)="onDecr10($event)"
+        (decr1)="onDecr1($event)"
+        (incr1)="onIncr1($event)"
+        (incr10)="onIncr10($event)">
+      </app-number-steps>
+    </div>
+  </div>
+
+  <!-- Custom Component: Number Edit -->
+  <div class="row align-items-center mb-3">
+    <label class="col-md-6 fw-bold">Number Edit Component:</label>
+    <div class="col-md-6">
+      <app-number-edit [(value)]="numberValue"></app-number-edit>
+    </div>
+  </div>
+</div>
+

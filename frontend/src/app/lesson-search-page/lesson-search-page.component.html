@@ -1,0 +1,63 @@
+<div class="container mt-5 p-4 shadow rounded bg-light">
+  <h2 class="text-center mb-4 text-primary">Search Form</h2>
+  <form id="search-form">
+    <!-- Title -->
+    <div class="mb-3">
+      <label for="title" class="form-label fw-bold">Title</label>
+      <input type="text" class="form-control rounded" id="title" placeholder="Enter title" />
+    </div>
+
+    <!-- Description -->
+    <div class="mb-3">
+      <label for="description" class="form-label fw-bold">Description</label>
+      <textarea class="form-control rounded" id="description" placeholder="Enter description" rows="3"></textarea>
+    </div>
+
+    <!-- Category -->
+    <div class="mb-3">
+      <label for="category" class="form-label fw-bold">Category</label>
+      <select class="form-control rounded" id="category">
+        <option value="">Select category</option>
+        <!-- Add options here -->
+      </select>
+    </div>
+
+    <!-- Min and Max Level -->
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="min-level" class="form-label fw-bold">Min Level</label>
+        <input type="number" min="0" max="100" class="form-control rounded" id="min-level" placeholder="0" />
+      </div>
+      <div class="col-md-6">
+        <label for="max-level" class="form-label fw-bold">Max Level</label>
+        <input type="number" min="0" max="100" class="form-control rounded" id="max-level" placeholder="100" />
+      </div>
+    </div>
+
+    <!-- Tags -->
+    <div class="mb-3">
+      <label for="tags" class="form-label fw-bold">Tags</label>
+      <div class="d-flex">
+        <input type="text" class="form-control rounded me-2" id="tags" placeholder="Enter tags (comma separated)" />
+        <button type="button" class="btn btn-secondary">+</button>
+      </div>
+    </div>
+
+    <!-- Author and Date Picker -->
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="author" class="form-label fw-bold">Author</label>
+        <input type="text" class="form-control rounded" id="author" placeholder="Enter author" />
+      </div>
+      <div class="col-md-6">
+        <label for="lastModifiedDate" class="form-label fw-bold">Last Modified Date</label>
+        <app-date-picker-range-popup></app-date-picker-range-popup>
+      </div>
+    </div>
+
+    <!-- Advanced Search Button -->
+    <div class="mt-4 text-center">
+      <button type="button" class="btn btn-primary w-50">Advanced Search</button>
+    </div>
+  </form>
+</div>

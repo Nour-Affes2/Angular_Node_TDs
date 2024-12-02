@@ -1,0 +1,110 @@
+<form [formGroup]="lessonForm" (ngSubmit)="onClickSubmit()">
+  <div class="container mt-5 p-4 shadow rounded bg-light">
+    <h3 class="text-center mb-4 text-primary">Lesson Form</h3>
+    <div class="mb-3">
+      <label for="title" class="form-label" [class.text-danger]="lessonForm.get('title')?.invalid">Title</label>
+      <input
+        id="title"
+        type="text"
+        class="form-control"
+        formControlName="title"
+        placeholder="Enter title"
+      />
+      <div *ngIf="lessonForm.get('title')?.invalid && lessonForm.get('title')?.touched" class="form-text text-danger">
+        Title is required.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label" [class.text-danger]="lessonForm.get('description')?.invalid">Description</label>
+      <textarea
+        id="description"
+        class="form-control"
+        formControlName="description"
+        rows="3"
+        placeholder="Enter description"
+      ></textarea>
+      <div *ngIf="lessonForm.get('description')?.invalid && lessonForm.get('description')?.touched" class="form-text text-danger">
+        Description is required.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="category" class="form-label" [class.text-danger]="lessonForm.get('category')?.invalid">Category</label>
+      <input
+        id="category"
+        type="text"
+        class="form-control"
+        formControlName="category"
+        placeholder="Enter category"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="level" class="form-label" [class.text-danger]="lessonForm.get('level')?.invalid">Level</label>
+      <input
+        id="level"
+        type="number"
+        class="form-control"
+        formControlName="level"
+        placeholder="Enter level (1-10)"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="prerequisite" class="form-label" [class.text-danger]="lessonForm.get('prerequisite')?.invalid">Prerequisite</label>
+      <input
+        id="prerequisite"
+        type="text"
+        class="form-control"
+        formControlName="prerequisite"
+        placeholder="Enter prerequisite"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="tags" class="form-label" [class.text-danger]="lessonForm.get('tags')?.invalid">Tags</label>
+      <input
+        id="tags"
+        type="text"
+        class="form-control"
+        formControlName="tags"
+        placeholder="Enter tags"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="copyright" class="form-label" [class.text-danger]="lessonForm.get('copyright')?.invalid">Copyright</label>
+      <input
+        id="copyright"
+        type="text"
+        class="form-control"
+        formControlName="copyright"
+        placeholder="Enter copyright"
+      />
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary w-50" [disabled]="!lessonForm.valid">
+        Submit
+      </button>
+    </div>
+
+    <div *ngIf="lessonForm.invalid" class="text-center text-danger mt-3">
+      Please fill out all required fields.
+    </div>
+  </div>
+</form>
+
+<!-- Tests From Td 3.1 -->
+<div class="container mt-4">
+  <h4 class="text-primary text-center">Tests From Td 3.1</h4>
+  <div class="d-grid gap-3">
+    <button type="button" class="btn btn-primary" (click)="onClickLesson()">Lesson List Page</button>
+    <button class="btn btn-primary" [routerLink]="['/lesson', 1234]">Detail for lesson 1234</button>
+    <a routerLink="/" class="btn btn-light">
+      <fa-icon [icon]="faHome"></fa-icon> Home
+    </a>
+  </div>
+</div>
+
